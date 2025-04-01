@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Não Encontrada</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(-45deg, #74ebd5, #9face6, #ff9a9e, #fecfef);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            overflow: hidden;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .container {
+            text-align: center;
+            padding: 60px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+            transform: scale(0);
+            animation: popUp 0.5s ease forwards;
+        }
+        @keyframes popUp {
+            to { transform: scale(1); }
+        }
+        h1 {
+            font-size: 120px;
+            color: #ff6b6b;
+            text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        p {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 40px;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+        a {
+            text-decoration: none;
+            background-color: #3498db;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 20px;
+            transition: background 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        a:hover {
+            background-color: #2980b9;
+            transform: translateY(-5px);
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #666;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>404</h1>
+        <p>Oops! A página que você está procurando não foi encontrada.</p>
+        <a href="https://skyapps.squareweb.app/">Voltar para a Página Inicial</a>
+        <footer>&copy; 2024 Sky Apps. Todos os direitos reservados.</footer>
+    </div>
+</body>
+</html>
