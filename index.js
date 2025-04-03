@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 8080;
 app.use(express.json({ limit: '100mb' }));
 
 app.get('/', (req, res) => {
-    res.redirect("https://discord.gg/skyapps");
+    res.redirect("https://discord.gg/6SwSw2g2tE");
 });
 
 app.post('/transcripts/v1/:channelId', (req, res) => {
