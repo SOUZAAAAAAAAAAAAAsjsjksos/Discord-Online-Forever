@@ -65,3 +65,14 @@ app.listen(PORT, () => {
             > Sky Apps: https://discord.gg/skyapps <
     `.trim());
 });
+
+// ------------------
+// Sistema Anti-Crash
+// ------------------
+process.on('uncaughtException', (err) => {
+    console.error('❗ | Erro não capturado:', err);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+    console.error('❗ | Promessa rejeitada não capturada:', reason);
+});
