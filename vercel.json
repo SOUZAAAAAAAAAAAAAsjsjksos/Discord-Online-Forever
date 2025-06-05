@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "routes": [
+    { "handle": "filesystem" }, 
+    { "src": "/transcripts/v1/.*", "dest": "/index.js" },
+    { "src": "/", "dest": "/404.html" } 
+  ]
+}
