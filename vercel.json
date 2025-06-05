@@ -1,8 +1,18 @@
 {
   "version": 2,
   "routes": [
-    { "handle": "filesystem" }, 
-    { "src": "/transcripts/v1/.*", "dest": "/index.js" },
-    { "src": "/", "dest": "/404.html" } 
+    {
+      "src": "/",
+      "dest": "/404.html",
+      "headers": { "Content-Type": "text/html" }
+    },
+    {
+      "src": "/transcripts/v1/.*",
+      "dest": "/index.js"
+    },
+    {
+      "src": ".*",
+      "dest": "/404.html"
+    }
   ]
 }
