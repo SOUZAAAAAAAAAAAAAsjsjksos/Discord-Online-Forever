@@ -1,18 +1,11 @@
 {
   "version": 2,
+  "builds": [
+    { "src": "index.js", "use": "@vercel/node" }
+  ],
   "routes": [
-    {
-      "src": "/",
-      "dest": "/404.html",
-      "headers": { "Content-Type": "text/html" }
-    },
-    {
-      "src": "/transcripts/v1/.*",
-      "dest": "/index.js"
-    },
-    {
-      "src": ".*",
-      "dest": "/404.html"
-    }
+    { "src": "/transcripts/v1/(.*)", "dest": "/index.js" },
+    { "src": "/", "dest": "/404.html" },
+    { "src": "/(.*)", "dest": "/404.html" }
   ]
 }
